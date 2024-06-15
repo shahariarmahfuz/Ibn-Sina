@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avicenna, or Ibn Sina</title>
+  <style>
+    body {
+      background-color: #000000;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-y: auto;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .archived {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(45deg, #1a1a1a, #000000, #1a1a1a);
+      background-size: 400% 400%;
+      animation: archivedAnimation 10s infinite;
+      z-index: -1;
+    }
+
+    @keyframes archivedAnimation {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 400% 400%;
+      }
+    }
+
+    .glass-box {
+      margin-top: 20px;
+      width: 300px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #ffffff;
+      z-index: 2;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .profile-pic:hover {
+      box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+    }
+
+    .content {
+      position: relative;
+      padding: 20px;
+      overflow: hidden;
+      text-align: left;
+      animation: contentFadeIn 3s ease-in-out;
+    }
+
+    @keyframes contentFadeIn {
+      0% {
+        transform: translateY(0%);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(0%);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .center-align {
+      text-align: center;
+    }
+
+    .background-text {
+      position: fixed;
+      bottom: 50px;
+      width: 100%;
+      background-color: #000000;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      z-index: 0;
+      pointer-events: none; /* Disable pointer events to make sure it's not interactive */
+    }
+
+    .background-text a {
+      color: #F8F8FF;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+      padding: 0 10px;
+      pointer-events: auto; /* Re-enable pointer events for links */
+    }
+
+    .background-text a:hover {
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      width: 100%;
+      padding: 10px 0;
+      z-index: 1;
+      background-color: #000000;
+      position: relative;
+      margin-top: 20px; /* Footer এর উপরে কিছু ফাঁকা স্থান রাখা */
+     
+  </style>
+  <script>
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.closest('.profile-picture')) {
+        e.preventDefault();
+    }
+});
+</script>
+</head>
+<body>
+  <div class="archived"></div>
+  <div class="glass-box">
+    <img src="https://i.ibb.co/MBB2JWc/IMG-20240615-202914.jpg" alt="Profile Picture" class="profile-pic">
+    <div class="content">
+      <h2 class="center-align">Avicenna, or Ibn Sina</h2>
+      <p class="center-align" style="color: #cccccc; font-size: 16px;">learn about his life</p>
+  <p>Avicenna, also known as Ibn Sina, was a Persian polymath who made significant contributions to various fields, including medicine, philosophy, astronomy, and mathematics. He is widely regarded as one of the most influential figures in the Islamic Golden Age and a pivotal figure in the history of medicine and philosophy. Born in 980 CE near Bukhara (in present-day Uzbekistan) and dying in 1037 CE in Hamadan (in present-day Iran), Avicenna's life and works spanned a crucial period of intellectual flourishing in the Islamic world.</p>
+
+<h3>Early Life and Education</h3>
+<p>Avicenna was born into a scholarly family, and his early education was guided by his father, who was a respected scholar himself. Avicenna's exceptional intellect became evident at an early age, and he quickly mastered the traditional Islamic sciences, including theology, jurisprudence, and grammar. By the age of ten, he had already memorized the Quran and by sixteen had delved deeply into philosophy.</p>
+
+<p>Avicenna's thirst for knowledge led him to study under various teachers, absorbing the works of Aristotle, Plato, and other Greek philosophers whose texts had been translated into Arabic. He also studied the works of earlier Islamic philosophers and scientists, such as Al-Farabi and Al-Razi, whose ideas would influence his own philosophical and medical theories.</p>
+
+<h3>Contributions to Medicine</h3>
+<p>Avicenna's most enduring legacy lies in the field of medicine. His comprehensive medical encyclopedia, "The Canon of Medicine" (Al-Qanun fi'l-Tibb), became the standard medical textbook in Europe and the Islamic world for centuries. Completed in 1025 CE, this monumental work synthesized the medical knowledge of the time, drawing from Greek, Roman, Persian, and Indian sources.</p>
+
+<p>"The Canon of Medicine" is divided into five books:</p>
+<ol>
+  <li><strong>General principles of medicine</strong>: covering anatomy, physiology, pathology, and general therapeutic principles.</li>
+  <li><strong>Materia medica</strong>: detailing the properties of over 800 medicinal substances.</li>
+  <li><strong>Diseases of specific organs or systems</strong>: such as the nervous system, reproductive system, and musculoskeletal system.</li>
+  <li><strong>Regimen of health</strong>: discussing hygiene, dietetics, and the influence of climate and environment on health.</li>
+  <li><strong>Pharmaceutical preparations</strong>: practical instructions for preparing medicines.</li>
+</ol>
+
+<p>Avicenna's approach to medicine was systematic and empirical, emphasizing the importance of careful observation and experimentation. He classified diseases based on their symptoms and proposed treatments that ranged from diet and lifestyle changes to specific pharmacological interventions. His contributions to pharmacology included the introduction of numerous new drugs and remedies, many of which were derived from plants and minerals.</p>
+
+<h3>Philosophical Works</h3>
+<p>In addition to medicine, Avicenna made significant contributions to philosophy, particularly in metaphysics, ethics, and epistemology. His philosophical system, heavily influenced by Aristotelian and Neoplatonic thought, aimed to reconcile Greek philosophy with Islamic theology and mysticism.</p>
+
+<p>Avicenna's philosophical masterpiece is "The Book of Healing" (Al-Shifa), a vast encyclopedia that covers various branches of knowledge, including logic, metaphysics, mathematics, and theology. The work is divided into four parts:</p>
+<ol>
+  <li><strong>Logic</strong>: covering topics such as definition, syllogism, and demonstration.</li>
+  <li><strong>Natural sciences</strong>: including physics, astronomy, and meteorology.</li>
+  <li><strong>Mathematics</strong>: encompassing geometry, arithmetic, and music theory.</li>
+  <li><strong>Metaphysics</strong>: exploring the nature of existence, the soul, and the divine.</li>
+</ol>
+
+<p>"The Book of Healing" played a crucial role in transmitting Greek philosophical ideas to the Islamic world and later to medieval Europe. Avicenna's emphasis on reason and rational inquiry, combined with a deep reverence for religious principles, influenced generations of scholars across cultural and religious boundaries.</p>
+
+<h3>Contributions to Astronomy and Mathematics</h3>
+<p>Avicenna also made notable contributions to astronomy and mathematics. He wrote several treatises on astronomy, including "The Book of the Proof" (Kitab al-Burhan), which discussed the motion of celestial bodies and the structure of the universe according to Ptolemaic astronomy. Avicenna's contributions to mathematics were diverse, encompassing topics such as algebra, geometry, and numerical methods.</p>
+
+<p>His work on algebra included advancements in solving quadratic equations and a systematic approach to algebraic operations. Avicenna's mathematical writings, although overshadowed by his contributions to medicine and philosophy, exemplify his wide-ranging intellectual curiosity and analytical prowess.</p>
+
+<h3>Influence and Legacy</h3>
+<p>Avicenna's influence extended far beyond his own time. His works were translated into Latin during the 12th century, contributing to the revival of Aristotelian philosophy in medieval Europe. "The Canon of Medicine" became a standard medical textbook in European universities until the 17th century, shaping medical education and practice across continents.</p>
+
+<p>In philosophy, Avicenna's synthesis of Greek, Islamic, and Persian thought paved the way for later philosophers such as Thomas Aquinas, who sought to reconcile Aristotelian philosophy with Christian theology. Avicenna's emphasis on reason, empirical observation, and systematic inquiry left an indelible mark on the development of scientific thought in both the Islamic world and Europe.</p>
+
+<h3>Personal Life and Character</h3>
+<p>Avicenna's life was marked by a relentless pursuit of knowledge and a deep commitment to scholarship. Despite his fame and intellectual achievements, he lived a modest and ascetic life, focusing primarily on his studies and writing. He served various rulers and patrons throughout his career, moving between cities in present-day Iran, Uzbekistan, and Afghanistan.</p>
+
+<p>Avicenna's philosophical outlook was deeply influenced by his Islamic faith, and he sought to harmonize reason with revelation, advocating for a balanced approach to understanding the natural and supernatural realms. His respect for religious traditions is evident in his writings on ethics and metaphysics, where he discusses the nature of virtue, happiness, and the human soul.</p>
+
+<h3>Death and Posthumous Reputation</h3>
+<p>Avicenna died in June 1037 in Hamadan, Iran, at the age of 57. His death was mourned across the Islamic world, and he was buried in Hamadan, where his tomb remains a revered site to this day. Avicenna's intellectual legacy continued to inspire scholars and thinkers in the centuries that followed, contributing to the rich tapestry of Islamic intellectual history.</p>
+
+<p>In conclusion, Avicenna, or Ibn Sina, stands as one of the greatest polymaths of the Islamic Golden Age, whose contributions to medicine, philosophy, and science shaped the course of intellectual history. His systematic approach to knowledge, emphasis on empirical observation, and synthesis of diverse intellectual traditions continue to resonate in contemporary scholarship. Avicenna's enduring legacy underscores the universal pursuit of truth and the transformative power of ideas across cultures and civilizations.</p>
+      
+    </div>
+  </div>
+  
+  <footer>
+    <p>&copy; 2024 Shahariar Mahfuz. All rights reserved.</p>
+  </footer>
+
+  <div class="background-text">
+    <a href="https://example.com">Back to Homepage</a>
+  </div>
+
+  </script>
+</body>
+</html>
